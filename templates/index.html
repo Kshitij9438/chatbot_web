@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Chatbot Pro</title>
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome Free CDN -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+    integrity="sha512-pIV+XnjYhcqXbY33bJBY2qnY+zqlzozM7RjJ2Zp6VWnJRhY2EZhGVwanMwE3Q8hEMtCqmKeYNRl4KShmGdqYjw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container d-flex align-items-center justify-content-center">
+      <i class="fas fa-robot fa-2x me-3"></i>
+      <h1 class="app-title">AI Chatbot Pro</h1>
+    </div>
+  </header>
+
+  <!-- Main chat area -->
+  <main class="container chat-container">
+    <div id="messages" class="chat-window"></div>
+    <div class="input-group mt-3">
+      <input
+        id="message-input"
+        type="text"
+        class="form-control input-field"
+        placeholder="Type your message…"
+        autofocus
+      />
+      <button id="send-btn" class="btn send-button">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Powered by Flask & Transformers
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

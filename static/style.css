@@ -1,0 +1,138 @@
+/* Base font */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.app-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Chat container */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+/* Chat window */
+.chat-window {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* Message bubbles */
+.msg {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1.25rem;
+  position: relative;
+  max-width: 70%;
+  word-break: break-word;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+/* User bubble (right) */
+.user-msg {
+  background: #48bb78;   /* green */
+  color: #fff;
+  margin-left: auto;
+  border-bottom-right-radius: 0.3rem;
+}
+
+/* Bot bubble (left) */
+.bot-msg {
+  background: #e0e7ff;   /* light indigo */
+  color: #1e293b;
+  margin-right: auto;
+  border-bottom-left-radius: 0.3rem;
+}
+
+/* Bubble pointers */
+.msg::before {
+  content: '';
+  position: absolute;
+  bottom: 0.5rem;
+  width: 0;
+  height: 0;
+  border: 0.6rem solid transparent;
+}
+.user-msg::before {
+  right: -1.2rem;
+  border-left-color: #48bb78;
+}
+.bot-msg::before {
+  left: -1.2rem;
+  border-right-color: #e0e7ff;
+}
+
+/* Timestamp */
+.msg .timestamp {
+  display: block;
+  font-size: 0.65rem;
+  color: rgba(0,0,0,0.35);
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+/* Input area */
+.input-field {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.send-button {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 0 1.5rem;
+  font-size: 1.25rem;
+}
+.send-button:hover {
+  background: #5a67d8;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  color: #475569;
+  background: rgba(255,255,255,0.5);
+}
+
+/* Scrollbar for chat */
+.chat-window::-webkit-scrollbar {
+  width: 10px;
+}
+.chat-window::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
